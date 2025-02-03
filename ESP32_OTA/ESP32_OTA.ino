@@ -7,7 +7,7 @@
 #define OTA_URL         "https://raw.githubusercontent.com/TanishKunthe/Testing_OTA/main/ESP32_OTA/ESP32_OTA.bin"
 #define VERSION_URL     "https://raw.githubusercontent.com/TanishKunthe/Testing_OTA/main/version.txt"  // Version file URL
 
-#define CURRENT_VERSION "1.1"  // Set the current firmware version
+#define CURRENT_VERSION "1.0"  // Set the current firmware version
 
 void setup() {
   delay(2000);
