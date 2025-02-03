@@ -10,6 +10,7 @@
 #define ledPin          2
 
 void setup() {
+  delay(2000);
   Serial.begin(115200);
   Serial.println("Testing the FoTa Github Cloning");
 
@@ -36,7 +37,7 @@ void setup() {
 }
 
 bool performOTA() {
-
+  delay(2000);
   WiFiClientSecure client;
   client.setInsecure();  // Bypass SSL certificate verification
   HTTPClient http;
@@ -79,7 +80,7 @@ bool performOTA() {
 }
 
 void loop() {
-  digitalWrite(ledPin, true);
-  delay(2000);
-  digitalWrite(ledPin, false);
+  //  digitalWrite(ledPin, true);
+  //  delay(2000);
+  //  digitalWrite(ledPin, false);
 }
