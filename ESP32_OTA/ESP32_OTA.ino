@@ -36,6 +36,7 @@ bool performOTA() {
 
   http.begin(client, OTA_URL); // Specify the URL
   int httpCode = http.GET(); // Make the request
+  Serial.print("HTTP Code : "); Serial.println(httpCode);
 
   if (httpCode == HTTP_CODE_OK) {
     int contentLength = http.getSize();
