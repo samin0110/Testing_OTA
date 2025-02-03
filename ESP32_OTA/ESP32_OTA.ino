@@ -4,7 +4,7 @@
 
 #define fota_ssid       "E-ARTKEY_4G"
 #define fota_password   "Connect@Eartkey"
-#define OTA_URL "http://github.com/TanishKunthe/Testing_OTA/blob/main/ESP32_OTA/ESP32_OTA.bin" // Change to your actual HTTP URL
+#define OTA_URL "http://github.com/TanishKunthe/Testing_OTA/tree/main/ESP32_OTA/ESP32_OTA.bin" // Change to your actual HTTP URL
 //https://github.com/TanishKunthe/Testing_OTA/ESP32_OTA.bin
 
 void setup() {
