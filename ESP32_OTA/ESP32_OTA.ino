@@ -4,7 +4,7 @@
 
 #define fota_ssid       "E-ARTKEY_4G"
 #define fota_password   "Connect@Eartkey"
-#define OTA_URL "http://github.com/TanishKunthe/Testing_OTA/tree/main/ESP32_OTA/ESP32_OTA.bin" // Change to your actual HTTP URL
+#define OTA_URL "https://raw.githubusercontent.com/TanishKunthe/Testing_OTA/main/ESP32_OTA/ESP32_OTA.bin" // Change to your actual HTTP URL
 //https://github.com/TanishKunthe/Testing_OTA/ESP32_OTA.bin
 
 void setup() {
@@ -31,8 +31,11 @@ void setup() {
 }
 
 bool performOTA() {
-  WiFiClient client;
+
+  WiFiClientSecure client;
+  client.setInsecure();  // Bypass SSL certificate verification
   HTTPClient http;
+  http.begin(client, OTA_URL);
 
   http.begin(client, OTA_URL); // Specify the URL
   int httpCode = http.GET(); // Make the request
