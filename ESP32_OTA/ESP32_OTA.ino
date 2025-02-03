@@ -80,7 +80,5 @@ bool performOTA() {
 }
 
 void loop() {
-  //  digitalWrite(ledPin, true);
-  //  delay(2000);
-  //  digitalWrite(ledPin, false);
+
 }
