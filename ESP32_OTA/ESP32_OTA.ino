@@ -7,12 +7,17 @@
 #define OTA_URL "https://raw.githubusercontent.com/TanishKunthe/Testing_OTA/main/ESP32_OTA/ESP32_OTA.bin" // Change to your actual HTTP URL
 //https://github.com/TanishKunthe/Testing_OTA/ESP32_OTA.bin
 
+#define ledPin          2
+
 void setup() {
   Serial.begin(115200);
   Serial.println("Testing the FoTa Github Cloning");
 
   WiFi.begin(fota_ssid, fota_password);
   Serial.println("Connecting to WiFi...");
+
+  pinMode(ledPin, OUTPUT);
+  digitalWrite(ledPin, false);
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
@@ -74,4 +79,7 @@ bool performOTA() {
 }
 
 void loop() {
+  digitalWrite(ledPin, true);
+  delay(2000);
+  digitalWrite(ledPin, false);
 }
